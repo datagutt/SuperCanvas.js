@@ -10,9 +10,9 @@
 		var el = document.getElementById("example");
 		var canvas = new SuperCanvas(/* canvas */ el, /* width */ 500, /* height */ 500);
 		if(canvas.canUse){
-			canvas.drawRectangle(/* color */ "#000", /* x */ 10, /* y */ 10, /* width */ 55, /* height */ 50);
+			canvas.drawRectangle(/* x */ 10, /* y */ 10, /* width */ 55, /* height */ 50, /* color */ "#000");
 			
-			canvas.drawCircle(/* color */ "blue", /* x */ 90, /* y */ 40, /* radius */ 20);
+			canvas.drawCircle(/* x */ 90, /* y */ 40, /* radius */ 20, /* color */ "blue");
 			
 			canvas.drawImage(/* url */ "images/troll.png", /* x */ 200, /* y */ 140, /* width */ 100, /* height */ 100);
 			

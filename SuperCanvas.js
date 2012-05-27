@@ -27,7 +27,7 @@
 		return context.fillStyle;
 	};
 	
-	SuperCanvas.prototype.drawRectangle = function(color, x, y, width, height){
+	SuperCanvas.prototype.drawRectangle = function(x, y, width, height, color){
 		var context = this.context;
 		if (color) {	
 			context.fillStyle = color;
@@ -38,7 +38,7 @@
 		return context.fill();
 	};
 	
-	SuperCanvas.prototype.drawCircle = function(color, x, y, radius){
+	SuperCanvas.prototype.drawCircle = function(x, y, radius, color){
 		var context = this.context;
 		if (color) {	
 			context.fillStyle = color;
