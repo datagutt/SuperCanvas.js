@@ -1,0 +1,26 @@
+<!doctype HTML>
+<html>
+<head>
+	<title>SuperCanvas</title>
+</head>
+<body>
+	<canvas id="example">Your browser does not support canvas.</canvas>
+	<script src="../SuperCanvas.js"></script>
+	<script>
+		var el = document.getElementById("example");
+		var canvas = new SuperCanvas(/* canvas */ el, /* width */ 500, /* height */ 500);
+		if(canvas.canUse){
+			canvas.drawRectangle(/* color */ "#000", /* x */ 10, /* y */ 10, /* width */ 55, /* height */ 50);
+			
+			canvas.drawCircle(/* color */ "blue", /* x */ 90, /* y */ 40, /* radius */ 20);
+			
+			canvas.drawImage(/* url */ "images/troll.png", /* x */ 200, /* y */ 140, /* width */ 100, /* height */ 100);
+			
+			canvas.font(/* size */ "20px", /* font */ "verdana");
+			canvas.color(/* color */ "green");
+			
+			canvas.drawText(/* text */ "hello", /* x */ 120, /* y */ 100);
+		}
+	</script>
+</body>
+</html>
