@@ -1,6 +1,6 @@
 # SuperCanvas.js
 
-This library aims to make using <canvas> easier.
+This library aims to make using canvas easier.
 
 ## Browser support
 
