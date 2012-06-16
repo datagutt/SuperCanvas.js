@@ -4,7 +4,7 @@
 ;(function(doc, global){
 	"use strict";
 	var SuperCanvas = function(canvas, width, height){
-		canvas = this.canvas = canvas;
+		this.canvas = canvas;
 		canvas.width = width || "auto";
 		canvas.height = height || "auto";
 		if (canvas.getContext) {
@@ -13,6 +13,7 @@
 		} else {
 			this.canUse = false;
 		}
+		initAPI(this, this.context);
 	};
 	
 	SuperCanvas.prototype.font = function(size, font){
@@ -49,7 +50,7 @@
 		return context.fill();
 	};
 	
-	SuperCanvas.prototype.drawImage = function(url, x, y, width, height){
+	SuperCanvas.prototype.drawImageFromURL = function(url, x, y, width, height){
 		var context = this.context;
 		var image = new Image();
 		image.onload = function(){
@@ -73,8 +74,8 @@
 		context.clearRect(0, 0, this.canvas.width, this.canvas.height);	
 	};
 	
-	// This was used to be compatible with the regular canvas api
-	// I dont use it anymore because trying to be compatible just caused problems
+	// This is used to be compatible with the regular canvas api
+
 	function initAPI(canvas, context){
 		for (var key in context) {
 			var obj = context[key];
